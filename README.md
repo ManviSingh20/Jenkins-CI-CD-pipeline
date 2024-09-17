@@ -100,11 +100,9 @@ Next, there will be a window to chance the password. Select the password of your
 
 Go back to jenkins and create a job.
 
+The first job will be CI_Pipeline
 
-
-<img width="402" alt="Screenshot 2024-09-18 at 1 28 36 AM" src="https://github.com/user-attachments/assets/e09b4356-df0c-4b9e-980a-63bdf04c1e9b">
-
-
+<img width="934" alt="Screenshot 2024-09-18 at 1 36 15 AM" src="https://github.com/user-attachments/assets/a00038fb-0fa8-4a29-8c78-78907df5cb86">
 
 
 
