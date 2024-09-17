@@ -51,20 +51,22 @@ Steps-
 
 1. To install Docker on Ubuntu 24.04, we'll run the following three commands:
 ```
-   a. for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
+for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
    
-   c. curl -fsSL https://get.docker.com -o get-docker.sh
+curl -fsSL https://get.docker.com -o get-docker.sh
    
-   d. sudo sh get-docker.sh
-   
+sudo sh get-docker.sh
+```
+
 3. If it doesn't work then use the following commands:
-   a. sudo usermod -aG docker $USER
+```
+sudo usermod -aG docker $USER
    
-   b. newgrp docker
+newgrp docker
    
-   c. docker version
+docker version
    
-   d. sudo systemctl restart docker
+sudo systemctl restart docker
 ```   
 
 
