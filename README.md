@@ -50,6 +50,7 @@ Steps-
 ## Install Docker on our EC2 Instance
 
 1. To install Docker on Ubuntu 24.04, we'll run the following three commands:
+```
    a. for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
    
    c. curl -fsSL https://get.docker.com -o get-docker.sh
@@ -64,8 +65,8 @@ Steps-
    c. docker version
    
    d. sudo systemctl restart docker
-   
-<img width="858" alt="Screenshot 2024-09-18 at 1 17 25 AM" src="https://github.com/user-attachments/assets/6cb13542-6ef9-4a8b-a861-ecdc180bcab7">
+```   
+
 
 
 ## Starting With Job
