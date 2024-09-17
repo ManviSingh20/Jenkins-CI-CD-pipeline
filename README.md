@@ -41,6 +41,12 @@ Steps-
    a. for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
    c. curl -fsSL https://get.docker.com -o get-docker.sh
    d. sudo sh get-docker.sh
+2. If it doesn't work then use the following commands:
+   a. sudo usermod -aG docker $USER
+   b. newgrp docker
+   c. docker version
+   d. sudo systemctl restart docker
+
 
 ## Starting With Job
 
@@ -48,12 +54,9 @@ Prerequisites - Before creating a job configure and install the following plugin
 1. Eclipse Temurin Installer.
 2. openJDK-native-plugin
 3. SonarQube Scanner - Will be used to perform code quality check analysis on our source code.
-
-
-
-
-
-
+4. Create a container for SonarQube using command:
+      docker run -d -p 9000:9000 sonarqube:lts-community
+5. Go back to jenkins and create a job.
 
 
 
