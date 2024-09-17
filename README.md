@@ -1,11 +1,8 @@
-# Jenkins-CI-CD-pipeline
+# Automated CI/CD Pipeline with Jenkins and Docker on AWS
 
+## About
 
-In this project, we will be creating 2 jobs:
-1. CI Pipeline - Building the application and performing all the code quality check, like security scanning on the source code. Then using Docker we will be creating the docker image.
-2. CD Pipeline - Once the Ci pipeline completes successfully, the CD pipeline will be triggered automatically. once it starts, it will be deployed using docker container.
-
-Once the application is successfully deployed we can access int in the browser.
+In this project, we will design and implement a comprehensive CI/CD pipeline to automate the process of building, testing, and deploying an application. By leveraging Jenkins, SonarQube, Docker, and AWS, this pipeline will facilitate a streamlined and efficient deployment workflow.
    
 <img width="1247" alt="Screenshot 2024-09-17 at 7 33 41 PM" src="https://github.com/user-attachments/assets/6ed8934a-c3db-4c77-977d-d7b7a7db1cd7">
 
