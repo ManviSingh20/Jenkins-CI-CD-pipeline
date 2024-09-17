@@ -33,7 +33,8 @@ In this project, we will design and implement a comprehensive CI/CD pipeline to 
 Once the deployment is complete, the application will be accessible through a web browser, ensuring that the latest version is live and functional.
 
 
-### Requirements 
+
+## Requirements 
 
 1. GitHub Repo Containing the Java Application Code
 2. AWS Account
@@ -41,6 +42,7 @@ Once the deployment is complete, the application will be accessible through a we
 4. SonarQube
 5. Docker
 6. Maven
+
 
 
 ## Setup & Install Jenkins in AWS Ubuntu Instance
@@ -97,10 +99,13 @@ Note - Java is a prerequisite for running Jenkins because Jenkins is built on Ja
    It will provide with the secret key for administration access.
 
 <img width="858" alt="Screenshot 2024-09-18 at 1 17 25 AM" src="https://github.com/user-attachments/assets/6cb13542-6ef9-4a8b-a861-ecdc180bcab7">
-11. Install suggested plugins.
-12. Create user admin.
-13. Save and continue.
-14. Start using jenkins.
+
+8. Install suggested plugins.
+9. Create user admin.
+10. Save and continue.
+11. Start using jenkins.
+
+
 
 ## Install Docker on our EC2 Instance
 
@@ -113,7 +118,7 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 ```
 
-3. If it doesn't work then use the following commands:
+2. Group Docker user
 ```
 sudo usermod -aG docker $USER
    
@@ -123,13 +128,14 @@ docker version
    
 sudo systemctl restart docker
 ```   
+
 <img width="555" alt="Screenshot 2024-09-18 at 1 30 43 AM" src="https://github.com/user-attachments/assets/90b55989-d714-448e-9352-57fd4ca2bb58">
 
 
 
 ## Starting With Job
 
-Prerequisites - Before creating a job configure and install the following plugins:
+Before creating a job configure and install the following plugins:
 
 ```Eclipse Temurin Installer.```
 
@@ -160,6 +166,7 @@ Go back to jenkins and create a job.
 The first job will be CI_Pipeline
 
 <img width="934" alt="Screenshot 2024-09-18 at 1 36 15 AM" src="https://github.com/user-attachments/assets/a00038fb-0fa8-4a29-8c78-78907df5cb86">
+
 
 
 
