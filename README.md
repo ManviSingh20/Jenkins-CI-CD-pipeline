@@ -40,7 +40,8 @@ Steps-
 8. Edit the inbound rules and set custom TCP on port 8080 from anywhere.
 9. Refresh the page. It is now working.
 10. Copy the path give on the web page and use it in the command sudo cat ____. it will provide with the secret key for administration access.
-    <img width="858" alt="Screenshot 2024-09-18 at 1 17 25 AM" src="https://github.com/user-attachments/assets/6cb13542-6ef9-4a8b-a861-ecdc180bcab7">
+
+<img width="858" alt="Screenshot 2024-09-18 at 1 17 25 AM" src="https://github.com/user-attachments/assets/6cb13542-6ef9-4a8b-a861-ecdc180bcab7">
 11. Install suggested plugins.
 12. Create user admin.
 13. Save and continue.
