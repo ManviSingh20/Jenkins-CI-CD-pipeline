@@ -3,6 +3,8 @@
 In this project, we will be creating 2 jobs:
 1. CI Pipeline -
 2. CD Pipeline -
+   
+<img width="1247" alt="Screenshot 2024-09-17 at 7 33 41 PM" src="https://github.com/user-attachments/assets/6ed8934a-c3db-4c77-977d-d7b7a7db1cd7">
 
 ## Setup & Install Jenkins in AWS Ubuntu Instance
 
@@ -10,6 +12,7 @@ What is Jenkins?
 It is an automated CI/CD tools. It is a Java-based, open source automation server that helps automate the software development process. It's used to manage and control the various stages of software delivery, such as building, testing, packaging, and more.
 
 Steps-
+
 1. Login to AWS Management Console and create an EC2 oinstance with ubuntu AMI.
 2. Connect with the instance using EC2 Instance Connect.
 3. run the following commands:
@@ -29,3 +32,6 @@ Steps-
 9. Copy the path give on the web page and use it in the command sudo cat ____. it will provide with the secret key to for administration access.
 10. install suggested plugins.
 11. create user admin.
+12. save and continue.
+13. start using jenkins.
+    
