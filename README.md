@@ -34,4 +34,36 @@ Steps-
 11. create user admin.
 12. save and continue.
 13. start using jenkins.
-    
+
+
+## Starting With Job
+
+Prerequisites - Before creating a job configure and install the following plugins:
+1. Eclipse Temurin Installer.
+2. openJDK-native-plugin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
