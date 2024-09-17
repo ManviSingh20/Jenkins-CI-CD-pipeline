@@ -45,12 +45,36 @@ Once the deployment is complete, the application will be accessible through a we
 
 ## Setup & Install Jenkins in AWS Ubuntu Instance
 
+1. Create a t2.large Ubuntu Instance on AWS, this will serve Jenkins, Maven, SonarQube, Docker. Here, we are using a large instance rather that a free tier instance because we require a resource intensive instance. 
 
-Steps-
+   <img width="661" alt="Screenshot 2024-09-18 at 4 01 29 AM" src="https://github.com/user-attachments/assets/77abce68-3c9e-4cc6-b6b6-162c83a4db4f">
 
-1. Login to AWS Management Console and create an EC2 instance with ubuntu AMI.
 2. Connect with the instance using EC2 Instance Connect.
-3. run the following commands:
+3. Install Java and Jenkins using the following commands.
+
+Install Java.
+```
+sudo su -
+sudo apt update
+sudo apt install openjdk-17-jre
+```
+
+Verify Java is Installed.
+```
+java -version
+```
+
+Now, proceed with installing Jenkins
+```
+curl -fsSL https://pkg.jenkins.io/debian/jenkins.io-2023.key | sudo tee \
+  /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  https://pkg.jenkins.io/debian binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo apt-get install jenkins
+```
+
 
    a. sudo apt update
    
