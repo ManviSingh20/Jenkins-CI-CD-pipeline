@@ -148,7 +148,7 @@ sudo systemctl restart docker
 2. Create a container for SonarQube using command:
    
      ```
-     docker run -d -p 9000:9000 sonarqube:lts-community
+     sudo docker run -d -p 9000:9000 sonarqube:lts-community
      ```
       
 <img width="716" alt="Screenshot 2024-09-18 at 1 31 07 AM" src="https://github.com/user-attachments/assets/aa737f37-5e2b-4cf5-b4fe-82c77b15eb54">
