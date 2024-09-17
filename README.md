@@ -35,12 +35,21 @@ Steps-
 12. save and continue.
 13. start using jenkins.
 
+## Install Docker on our EC2 Instance
+
+1. To install Docker in Ubuntu 24.04, we'll run the following three commands:
+   a. for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
+   c. curl -fsSL https://get.docker.com -o get-docker.sh
+   d. sudo sh get-docker.sh
 
 ## Starting With Job
 
 Prerequisites - Before creating a job configure and install the following plugins:
 1. Eclipse Temurin Installer.
 2. openJDK-native-plugin
+3. SonarQube Scanner - Will be used to perform code quality check analysis on our source code.
+
+
 
 
 
