@@ -80,10 +80,10 @@ sudo apt-get install jenkins
 Note - Java is a prerequisite for running Jenkins because Jenkins is built on Java and operates as a Java-based application.
 
 4. By default, Jenkins will not be accessible to the external world due to the inbound traffic restriction by AWS. Open port 8080 in the inbound traffic rules as show below.
-- EC2 > Instances > Click on
-- In the bottom tabs -> Click on Security
-- Security groups
-- Add inbound traffic rules as shown in the image (you can just allow TCP 8080 as well, in my case, I allowed ```All traffic```).
+   - EC2 > Instances > Click on
+   - In the bottom tabs -> Click on Security
+   - Security groups
+   - Add inbound traffic rules as shown in the image (you can just allow TCP 8080 as well, in my case, I allowed ```All traffic```).
 
 <img width="968" alt="Screenshot 2024-09-18 at 4 08 56 AM" src="https://github.com/user-attachments/assets/715e6ff4-4ad3-416b-94c0-ab9f032db35c">
 
@@ -92,18 +92,18 @@ Note - Java is a prerequisite for running Jenkins because Jenkins is built on Ja
    ps -ef | grep jenkins
    ```
 
-7. Copy the path give on the web page and use it in the command:
+6. Copy the path give on the web page and use it in the command:
    ```
    sudo cat /var/lib/jenkins/secrets/initialAdminPassword
-   ```.
+   ```
    It will provide with the secret key for administration access.
 
 <img width="858" alt="Screenshot 2024-09-18 at 1 17 25 AM" src="https://github.com/user-attachments/assets/6cb13542-6ef9-4a8b-a861-ecdc180bcab7">
 
-8. Install suggested plugins.
-9. Create user admin.
-10. Save and continue.
-11. Start using jenkins.
+7. Install suggested plugins.
+8. Create user admin.
+9. Save and continue.
+10. Start using jenkins.
 
 
 
@@ -133,7 +133,7 @@ sudo systemctl restart docker
 
 
 
-## Setting Up SonarQube Server
+## Set Up SonarQube Server
 
 1. Before creating a job configure and install the following plugins:
 
@@ -166,9 +166,9 @@ sudo systemctl restart docker
 
 ## Creating CI/CD Pipeline
 
-Go back to jenkins and create a job.
+1. Go back to jenkins and create a job.
 
-The first job will be CI_Pipeline
+2. The first job will be CI_Pipeline
 
 <img width="934" alt="Screenshot 2024-09-18 at 1 36 15 AM" src="https://github.com/user-attachments/assets/a00038fb-0fa8-4a29-8c78-78907df5cb86">
 
