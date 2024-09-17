@@ -70,6 +70,16 @@ Prerequisites - Before creating a job configure and install the following plugin
 
 
 
+## Commands
+1. ps -ef | grep jenkins - Start jenkins server.
+2. 
+
+
+
+
+
+
+
 
 
 
