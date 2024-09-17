@@ -26,6 +26,8 @@ Steps-
    
    c. Install jenkins by visiting [pkg.jenkins.io](https://pkg.jenkins.io/debian-stable/). run all the given commands step by step.
 
+   <img width="1310" alt="Screenshot 2024-09-18 at 1 08 32 AM" src="https://github.com/user-attachments/assets/aa557e97-e5a9-4299-b335-df0e23ebec89">
+
    Note - Java is a prerequisite for running Jenkins because Jenkins is built on Java and operates as a Java-based application.
    
 5. Check for java version by using command - java -version. It will be java 11 but we installed java 8. this is because Jenkins require java 11 hence it is updated in the later steps provided in the documentation.
