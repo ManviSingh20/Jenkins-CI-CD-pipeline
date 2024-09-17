@@ -14,8 +14,7 @@ Steps-
 2. Connect with the instance using EC2 Instance Connect.
 3. run the following commands:
    a. sudo apt update
-   b. sudo apt install java
+   b. sudo apt install openjdk-8-jdk -y
    Note - Installing java in necesarry because jenkins is integrated with java, hence it won't work without it.
-   c. 
-
-5. 
+   c. Install jenkins by visiting [pkg.jenkins.io](https://pkg.jenkins.io/debian-stable/). run all the given commands step by step.
+4. Check for java version
