@@ -75,27 +75,20 @@ sudo apt-get update
 sudo apt-get install jenkins
 ```
 
+Note - Java is a prerequisite for running Jenkins because Jenkins is built on Java and operates as a Java-based application.
 
-   a. sudo apt update
-   
-   b. sudo apt install openjdk-8-jdk -y
-   
-   c. Install jenkins by visiting [pkg.jenkins.io](https://pkg.jenkins.io/debian-stable/). run all the given commands step by step.
+4. By default, Jenkins will not be accessible to the external world due to the inbound traffic restriction by AWS. Open port 8080 in the inbound traffic rules as show below.
+- EC2 > Instances > Click on
+- In the bottom tabs -> Click on Security
+- Security groups
+- Add inbound traffic rules as shown in the image (you can just allow TCP 8080 as well, in my case, I allowed ```All traffic```).
 
-   <img width="1310" alt="Screenshot 2024-09-18 at 1 08 32 AM" src="https://github.com/user-attachments/assets/aa557e97-e5a9-4299-b335-df0e23ebec89">
+<img width="968" alt="Screenshot 2024-09-18 at 4 08 56 AM" src="https://github.com/user-attachments/assets/715e6ff4-4ad3-416b-94c0-ab9f032db35c">
 
-   Note - Java is a prerequisite for running Jenkins because Jenkins is built on Java and operates as a Java-based application.
-   
-5. Check for java version by using command - java -version. It will be java 17 but we installed java 8. This is because Jenkins require java 11 hence it is updated in the later steps provided in the documentation.
-6. Start the server by using the following command -
-   a. sudo systemctl start jenkins
-   b. sudo systemctl enable jenkins
-   c. sudo systemctl status jenkins
-   Note - By default jenkins runs on port 8080.
-7. Check whether we can access it or not. Go to instance copy its public ip address and paste in the the new browser window, and add :8080 at last as it runs on port 8080 by default. It won't work at first as we haven't edited the inbound rules.
-8. Edit the inbound rules and set custom TCP on port 8080 from anywhere.
-9. Refresh the page. It is now working.
-10. Copy the path give on the web page and use it in the command sudo cat ____. it will provide with the secret key for administration access.
+5. Check if jenkins is running
+   ```ps -ef | grep jenkins```
+
+6. Copy the path give on the web page and use it in the command ``` sudo cat /var/lib/jenkins/secrets/initialAdminPassword```. It will provide with the secret key for administration access.
 
 <img width="858" alt="Screenshot 2024-09-18 at 1 17 25 AM" src="https://github.com/user-attachments/assets/6cb13542-6ef9-4a8b-a861-ecdc180bcab7">
 11. Install suggested plugins.
