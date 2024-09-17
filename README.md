@@ -33,7 +33,7 @@ In this project, we will design and implement a comprehensive CI/CD pipeline to 
 Once the deployment is complete, the application will be accessible through a web browser, ensuring that the latest version is live and functional.
 
 
-## Requirements 
+### Requirements 
 
 1. GitHub Repo Containing the Java Application Code
 2. AWS Account
@@ -86,9 +86,15 @@ Note - Java is a prerequisite for running Jenkins because Jenkins is built on Ja
 <img width="968" alt="Screenshot 2024-09-18 at 4 08 56 AM" src="https://github.com/user-attachments/assets/715e6ff4-4ad3-416b-94c0-ab9f032db35c">
 
 5. Check if jenkins is running
-   ```ps -ef | grep jenkins```
+   ```
+   ps -ef | grep jenkins
+   ```
 
-6. Copy the path give on the web page and use it in the command ``` sudo cat /var/lib/jenkins/secrets/initialAdminPassword```. It will provide with the secret key for administration access.
+7. Copy the path give on the web page and use it in the command:
+   ```
+   sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+   ```.
+   It will provide with the secret key for administration access.
 
 <img width="858" alt="Screenshot 2024-09-18 at 1 17 25 AM" src="https://github.com/user-attachments/assets/6cb13542-6ef9-4a8b-a861-ecdc180bcab7">
 11. Install suggested plugins.
@@ -129,18 +135,20 @@ Prerequisites - Before creating a job configure and install the following plugin
 
 ```openJDK-native-plugin```
 
-```SonarQube Scanner``` - Will be used to perform code quality check analysis on our source code.
+```SonarQube Scanner```
 
 <img width="402" alt="Screenshot 2024-09-18 at 1 28 36 AM" src="https://github.com/user-attachments/assets/e09b4356-df0c-4b9e-980a-63bdf04c1e9b">
 
 Create a container for SonarQube using command:
-      docker run -d -p 9000:9000 sonarqube:lts-community
+     ```
+     docker run -d -p 9000:9000 sonarqube:lts-community
+     ```
       
 <img width="716" alt="Screenshot 2024-09-18 at 1 31 07 AM" src="https://github.com/user-attachments/assets/aa737f37-5e2b-4cf5-b4fe-82c77b15eb54">
 
 This will start the sonarqube server.
-Use Username as: ```admin```
-use Password as: ```admin```
+Use Username as: ``` admin ```
+use Password as: ``` admin ```
 
 Next, there will be a window to chance the password. Select the password of your own.
 
