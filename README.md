@@ -1,5 +1,6 @@
 # Jenkins-CI-CD-pipeline
 
+
 In this project, we will be creating 2 jobs:
 1. CI Pipeline - Building the application and performing all the code quality check, like security scanning on the source code. Then using Docker we will be creating the docker image.
 2. CD Pipeline - Once the Ci pipeline completes successfully, the CD pipeline will be triggered automatically. once it starts, it will be deployed using docker container.
