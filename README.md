@@ -16,24 +16,29 @@ Steps-
 1. Login to AWS Management Console and create an EC2 oinstance with ubuntu AMI.
 2. Connect with the instance using EC2 Instance Connect.
 3. run the following commands:
+
    a. sudo apt update
+   
    b. sudo apt install openjdk-8-jdk -y
+   
    Note - Installing java in necesarry because jenkins is integrated with java, hence it won't work without it.
+   
    c. Install jenkins by visiting [pkg.jenkins.io](https://pkg.jenkins.io/debian-stable/). run all the given commands step by step.
-4. Check for java version by using command - java -version. It will be java 11 but we installed java 8. since jenkinds require java 11 hence it is updated.
-5. Start the server by using the following command -
+   
+5. Check for java version by using command - java -version. It will be java 11 but we installed java 8. since jenkinds require java 11 hence it is updated.
+6. Start the server by using the following command -
    a. sudo systemctl start jenkins
    b. sudo systemctl enable jenkins
    c. sudo systemctl status jenkins
    Note - By default jenkins runs on port 8080.
-6. Check whether we can access it or note. Go to instamces copy its public ip address and paste in the the new browser window, and add :8080 at last as it runs on port 8080 by default. it won't work.
-7. Edit the inbound rules and set custom TCP on port 8080 from anywhere.
-8. refresh the page. it is now working.
-9. Copy the path give on the web page and use it in the command sudo cat ____. it will provide with the secret key to for administration access.
-10. install suggested plugins.
-11. create user admin.
-12. save and continue.
-13. start using jenkins.
+7. Check whether we can access it or note. Go to instamces copy its public ip address and paste in the the new browser window, and add :8080 at last as it runs on port 8080 by default. it won't work.
+8. Edit the inbound rules and set custom TCP on port 8080 from anywhere.
+9. refresh the page. it is now working.
+10. Copy the path give on the web page and use it in the command sudo cat ____. it will provide with the secret key to for administration access.
+11. install suggested plugins.
+12. create user admin.
+13. save and continue.
+14. start using jenkins.
 
 ## Install Docker on our EC2 Instance
 
