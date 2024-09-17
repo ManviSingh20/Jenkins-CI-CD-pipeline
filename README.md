@@ -30,7 +30,7 @@ Steps-
 
    Note - Java is a prerequisite for running Jenkins because Jenkins is built on Java and operates as a Java-based application.
    
-5. Check for java version by using command - java -version. It will be java 11 but we installed java 8. this is because Jenkins require java 11 hence it is updated in the later steps provided in the documentation.
+5. Check for java version by using command - java -version. It will be java 17 but we installed java 8. This is because Jenkins require java 11 hence it is updated in the later steps provided in the documentation.
 6. Start the server by using the following command -
    a. sudo systemctl start jenkins
    b. sudo systemctl enable jenkins
@@ -40,6 +40,7 @@ Steps-
 8. Edit the inbound rules and set custom TCP on port 8080 from anywhere.
 9. Refresh the page. It is now working.
 10. Copy the path give on the web page and use it in the command sudo cat ____. it will provide with the secret key for administration access.
+    <img width="858" alt="Screenshot 2024-09-18 at 1 17 25 AM" src="https://github.com/user-attachments/assets/6cb13542-6ef9-4a8b-a861-ecdc180bcab7">
 11. Install suggested plugins.
 12. Create user admin.
 13. Save and continue.
@@ -62,6 +63,8 @@ Steps-
    c. docker version
    
    d. sudo systemctl restart docker
+   
+<img width="858" alt="Screenshot 2024-09-18 at 1 17 25 AM" src="https://github.com/user-attachments/assets/6cb13542-6ef9-4a8b-a861-ecdc180bcab7">
 
 
 ## Starting With Job
