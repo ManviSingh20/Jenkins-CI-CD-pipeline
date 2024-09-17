@@ -6,11 +6,45 @@ In this project, we will design and implement a comprehensive CI/CD pipeline to 
    
 <img width="1247" alt="Screenshot 2024-09-17 at 7 33 41 PM" src="https://github.com/user-attachments/assets/6ed8934a-c3db-4c77-977d-d7b7a7db1cd7">
 
+## Tools Used
+
+1. Jenkins - Jenkins is an open-source automation server used to orchestrate and manage the CI/CD pipeline. It automates the build, test, and deployment processes, providing a robust framework for continuous integration and continuous delivery.
+
+2. SonarQube - SonarQube is a code quality and security analysis tool that helps in identifying and fixing code issues. It performs static code analysis to detect bugs, vulnerabilities, and code smells, ensuring that the code adheres to best practices and maintains high quality.
+
+3. Docker - Docker is a platform for developing, shipping, and running applications in isolated containers. It allows for the creation of a consistent environment across development, testing, and production stages by packaging the application and its dependencies into a Docker image.
+
+4. AWS - Amazon Web Services (AWS) provides cloud infrastructure for hosting and deploying applications.
+
+
+## Pipeline Overview
+
+1. Continuous Integration (CI) Pipeline: The CI pipeline focuses on automating the integration process of code changes. It includes the following stages:
+   1. Git Checkout
+   2. Compile
+   3. Sonarqube Analysis
+   4. Build Application
+   5. Build & Push Docker Image
+   6. Trigger CD Pipeline
+
+2. Continuous Integration (CD) Pipeline: Following the successful execution of the CI pipeline, the CD pipeline is triggered automatically to deploy the application. It involves:
+   1. Docker Deploy to Container
+
+Once the deployment is complete, the application will be accessible through a web browser, ensuring that the latest version is live and functional.
+
+
+## Requirements 
+
+1. GitHub Repo Containing the Java Application Code
+2. AWS Account
+3. Jenkins Server
+4. SonarQube
+5. Docker
+6. Maven
+
 
 ## Setup & Install Jenkins in AWS Ubuntu Instance
 
-What is Jenkins?
-It is an automated CI/CD tools. It is a Java-based, open source automation server that helps automate the software development process. It's used to manage and control the various stages of software delivery, such as building, testing, packaging, and more.
 
 Steps-
 
