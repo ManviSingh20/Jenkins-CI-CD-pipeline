@@ -133,33 +133,38 @@ sudo systemctl restart docker
 
 
 
-## Starting With Job
+## Setting Up SonarQube Server
 
-Before creating a job configure and install the following plugins:
+1. Before creating a job configure and install the following plugins:
 
-```Eclipse Temurin Installer.```
-
-```openJDK-native-plugin```
-
-```SonarQube Scanner```
+   ```Eclipse Temurin Installer.```
+   
+   ```openJDK-native-plugin```
+   
+   ```SonarQube Scanner```
 
 <img width="402" alt="Screenshot 2024-09-18 at 1 28 36 AM" src="https://github.com/user-attachments/assets/e09b4356-df0c-4b9e-980a-63bdf04c1e9b">
 
-Create a container for SonarQube using command:
+2. Create a container for SonarQube using command:
+   
      ```
      docker run -d -p 9000:9000 sonarqube:lts-community
      ```
       
 <img width="716" alt="Screenshot 2024-09-18 at 1 31 07 AM" src="https://github.com/user-attachments/assets/aa737f37-5e2b-4cf5-b4fe-82c77b15eb54">
 
-This will start the sonarqube server.
-Use Username as: ``` admin ```
-use Password as: ``` admin ```
+3. The SonarQube server will start
+   
+   - Use Username as: ``` admin ```
+   - Use Password as: ``` admin ```
 
-Next, there will be a window to chance the password. Select the password of your own.
+4. There will be a window to chance the password. Select the password of your own.
 
 <img width="1389" alt="Screenshot 2024-09-18 at 1 33 38 AM" src="https://github.com/user-attachments/assets/4ca19318-23ae-4bb2-aeb9-25f05c541af0">
 
+
+
+## Creating CI/CD Pipeline
 
 Go back to jenkins and create a job.
 
