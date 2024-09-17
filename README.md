@@ -17,4 +17,13 @@ Steps-
    b. sudo apt install openjdk-8-jdk -y
    Note - Installing java in necesarry because jenkins is integrated with java, hence it won't work without it.
    c. Install jenkins by visiting [pkg.jenkins.io](https://pkg.jenkins.io/debian-stable/). run all the given commands step by step.
-4. Check for java version
+4. Check for java version by using command - java -version. It will be java 11 but we installed java 8. since jenkinds require java 11 hence it is updated.
+5. Start the server by using the following command -
+   a. sudo systemctl start jenkins
+   b. sudo systemctl enable jenkins
+   c. sudo systemctl status jenkins
+   Note - By default jenkins runs on port 8080.
+6. Check whether we can access it or note. Go to instamces copy its public ip address and paste in the the new browser window, and add :8080 at last as it runs on port 8080 by default. it won't work.
+7. Edit the inbound rules and set custom TCP on port 8080 from anywhere.
+8. refresh the page. it is now working.
+9. 
