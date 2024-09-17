@@ -68,24 +68,41 @@ docker version
    
 sudo systemctl restart docker
 ```   
+<img width="555" alt="Screenshot 2024-09-18 at 1 30 43 AM" src="https://github.com/user-attachments/assets/90b55989-d714-448e-9352-57fd4ca2bb58">
 
 
 
 ## Starting With Job
 
 Prerequisites - Before creating a job configure and install the following plugins:
-1. Eclipse Temurin Installer.
-2. openJDK-native-plugin
-3. SonarQube Scanner - Will be used to perform code quality check analysis on our source code.
-4. Create a container for SonarQube using command:
+
+```Eclipse Temurin Installer.```
+
+```openJDK-native-plugin```
+
+```SonarQube Scanner``` - Will be used to perform code quality check analysis on our source code.
+
+<img width="402" alt="Screenshot 2024-09-18 at 1 28 36 AM" src="https://github.com/user-attachments/assets/e09b4356-df0c-4b9e-980a-63bdf04c1e9b">
+
+Create a container for SonarQube using command:
       docker run -d -p 9000:9000 sonarqube:lts-community
-5. Go back to jenkins and create a job.
+      
+<img width="716" alt="Screenshot 2024-09-18 at 1 31 07 AM" src="https://github.com/user-attachments/assets/aa737f37-5e2b-4cf5-b4fe-82c77b15eb54">
+
+This will start the sonarqube server.
+Use Username as: ```admin```
+use Password as: ```admin```
+
+Next, there will be a window to chance the password. Select the password of your own.
+
+<img width="1389" alt="Screenshot 2024-09-18 at 1 33 38 AM" src="https://github.com/user-attachments/assets/4ca19318-23ae-4bb2-aeb9-25f05c541af0">
+
+
+Go back to jenkins and create a job.
 
 
 
-
-
-
+<img width="402" alt="Screenshot 2024-09-18 at 1 28 36 AM" src="https://github.com/user-attachments/assets/e09b4356-df0c-4b9e-980a-63bdf04c1e9b">
 
 
 
