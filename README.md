@@ -26,4 +26,6 @@ Steps-
 6. Check whether we can access it or note. Go to instamces copy its public ip address and paste in the the new browser window, and add :8080 at last as it runs on port 8080 by default. it won't work.
 7. Edit the inbound rules and set custom TCP on port 8080 from anywhere.
 8. refresh the page. it is now working.
-9. 
+9. Copy the path give on the web page and use it in the command sudo cat ____. it will provide with the secret key to for administration access.
+10. install suggested plugins.
+11. create user admin.
