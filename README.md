@@ -79,11 +79,16 @@ sudo apt-get install jenkins
 
 Note - Java is a prerequisite for running Jenkins because Jenkins is built on Java and operates as a Java-based application.
 
-4. By default, Jenkins will not be accessible to the external world due to the inbound traffic restriction by AWS. Open port 8080 in the inbound traffic rules as show below.
-   - EC2 > Instances > Click on
-   - In the bottom tabs -> Click on Security
+4.Copy the Public IP of the instance and paste it in your browser tab followed with :8080, to access Jenkins Server. 
+```
+<publicIP>:8080
+```
+
+5. By default, Jenkins will not be accessible to the external world due to the inbound traffic restriction by AWS. Open port 8080 in the inbound traffic rules as show below.
+   - EC2 > Instances
+   - In the bottom tabs, click on Security
    - Security groups
-   - Add inbound traffic rules as shown in the image (you can just allow TCP 8080 as well, in my case, I allowed ```All traffic```).
+   - Add inbound traffic rules as shown in the image (you can just allow TCP 8080 as well, in my case, I allowed ```All traffic```.
 
 <img width="968" alt="Screenshot 2024-09-18 at 4 08 56 AM" src="https://github.com/user-attachments/assets/715e6ff4-4ad3-416b-94c0-ab9f032db35c">
 
@@ -118,7 +123,7 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 ```
 
-2. Group Docker user
+2. Group Docker user to grant the necessary permissions to your user without needing "sudo" for every Docker command.
 ```
 sudo usermod -aG docker $USER
    
