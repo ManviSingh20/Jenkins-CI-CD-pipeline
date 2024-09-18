@@ -16,6 +16,11 @@ In this project, we will design and implement a comprehensive CI/CD pipeline to 
 
 4. AWS - Amazon Web Services (AWS) provides cloud infrastructure for hosting and deploying applications.
 
+## Ports
+
+1. Jenkins - 8080
+2. SonarQube - 9000
+3. Shopping-cart Application - 8070
 
 
 ## Pipeline Overview
@@ -198,14 +203,28 @@ sudo systemctl restart docker
    1. JDK > Name = jdk11 > Install automatically > Add Installer > Install from adoptium .net > Choose jdk-11.0.19+7.
    2. SonarQube Scanner Installations > Name = sonar-scanner > Install automatically > Version = SonarQube Scanner 4.8.0.2856
    3. Maven >  Name = maven > Install automatically > Version = 3.6.0
-   
+3. Click on apply & save.
 4. Scroll down and write the script as follows. (Select the Hello World Template from the drop down arrow).
 5. The stages are as follows:
    1. Git Checkout - Use pipline syntax to write the script of copying the source code from github repo and write it in the script.
       
    <img width="1074" alt="Screenshot 2024-09-19 at 1 53 08 AM" src="https://github.com/user-attachments/assets/f8c0b025-db8a-46e5-97d7-fa2aefffb7cd">
 
-   2. 
+   2. Compile
+   3. SonarQube Analysis - Here, we will require to generate the login token which can be done by opening SonarQube Server > Administration    > Security > Users > Tokens > Name = 1 > Generate. Copy the token and use it in your script.
+   4. OWASP SCAN
+      - For this stage we have to download the following plugins:
+
+      <img width="379" alt="Screenshot 2024-09-19 at 2 23 40 AM" src="https://github.com/user-attachments/assets/0e515e61-9a81-4512-a26c-b319c290db3c">
+
+      - Define the following tools:
+         - Dependency-Check installations > Name = DP > Install Automatically > Version = 6.5.1
+         - Docker > Name = docker > Install Automatically > Download from docker.com > Version = Latest.
+      - It has it's own format for script given below:
+        ```
+        dependencyCheck additionalArguments: '', odcInstallation: 'DP-check'
+           
+      
 
 As soon as the CI_Pipeline completes, it will automatically trigger the CD_Pipeline.
 
