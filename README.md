@@ -189,10 +189,21 @@ sudo systemctl restart docker
 ### CI_Pipeline
 
 1. Enable the discard old builds while keepng max no. of builds to keep as 2.
+2. Download the following tools on Jenkins:
+   
+3. Scroll down and write the script as follows. (Select the Hello World Template from the drop down arrow).
+
+
+As soon as the CI_Pipeline completes, it will automatically trigger the CD_Pipeline.
+
+### CD_Pipeline
+
+1. Enable the discard old builds while keepng max no. of builds to keep as 2, similar to CI_Pipeline.
 2. Scroll down and write the script as follows. (Select the Hello World Template from the drop down arrow).
 
+<img width="928" alt="Screenshot 2024-09-19 at 1 16 00 AM" src="https://github.com/user-attachments/assets/ab622faa-49de-47db-b672-57d8e5a2f5e8">
 
-
+The CD_Pipeline will have only 1 stage, ``` Docker Deploy to Container ```, containing the script having docker commands. Here, we can use the pipeline syntax to generate the script format. 
 
 ## Commands
 1. ps -ef | grep jenkins - Start jenkins server.
