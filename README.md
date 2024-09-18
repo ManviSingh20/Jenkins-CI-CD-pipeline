@@ -123,7 +123,9 @@ sudo sh get-docker.sh
 sudo usermod -aG docker $USER
    
 newgrp docker
-   
+```
+3. Check Docker version and restart Docker.
+```
 docker version
    
 sudo systemctl restart docker
@@ -135,7 +137,7 @@ sudo systemctl restart docker
 
 ## Set Up SonarQube Server
 
-1. Before creating a job configure and install the following plugins:
+1. Before creating a job on Jenkins, configure and install the following plugins:
 
    ```Eclipse Temurin Installer.```
    
@@ -168,11 +170,11 @@ sudo systemctl restart docker
 
 1. Go back to jenkins and create a job.
 
-2. The first job will be CI_Pipeline
+2. The first job will be CI_Pipeline.
 
 <img width="934" alt="Screenshot 2024-09-18 at 1 36 15 AM" src="https://github.com/user-attachments/assets/a00038fb-0fa8-4a29-8c78-78907df5cb86">
 
-
+### CI_Pipeline
 
 
 
