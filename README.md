@@ -94,7 +94,8 @@ Note - Java is a prerequisite for running Jenkins because Jenkins is built on Ja
 
 5. Check if jenkins is running
    ```
-   ps -ef | grep jenkins
+   sudo systemctl status jenkins
+
    ```
 
 6. Copy the path give on the web page and use it in the command:
