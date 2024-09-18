@@ -215,7 +215,7 @@ sudo systemctl restart docker
    4. OWASP SCAN
       - For this stage we have to download the following plugins:
 
-      <img width="379" alt="Screenshot 2024-09-19 at 2 23 40 AM" src="https://github.com/user-attachments/assets/0e515e61-9a81-4512-a26c-b319c290db3c">
+         <img width="379" alt="Screenshot 2024-09-19 at 2 23 40 AM" src="https://github.com/user-attachments/assets/0e515e61-9a81-4512-a26c-b319c290db3c">
 
       - Define the following tools:
          - Dependency-Check installations > Name = DP > Install Automatically > Version = 6.5.1
@@ -225,8 +225,15 @@ sudo systemctl restart docker
         dependencyCheck additionalArguments: '', odcInstallation: 'DP-check'
            dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
         ```
-           
-      
+   5. Build Application
+
+   6. Build & Push Docker Image - Generate script using Pipeline Syntax
+
+      <img width="401" alt="Screenshot 2024-09-19 at 2 43 47 AM" src="https://github.com/user-attachments/assets/698b6ad8-e5d8-4662-afde-5932a31854db">
+
+      <img width="1040" alt="Screenshot 2024-09-19 at 2 42 59 AM" src="https://github.com/user-attachments/assets/3835c54b-b2d0-457c-bcf0-220e44af723a">
+
+      <img width="947" alt="Screenshot 2024-09-19 at 2 44 31 AM" src="https://github.com/user-attachments/assets/ec8cf780-f69d-4163-9adf-d9da92669a5b">
 
 As soon as the CI_Pipeline completes, it will automatically trigger the CD_Pipeline.
 
