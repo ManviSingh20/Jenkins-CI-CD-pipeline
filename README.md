@@ -210,6 +210,78 @@ sudo systemctl restart docker
    3. Maven >  Name = maven > Install automatically > Version = 3.6.0
 3. Click on apply & save.
 4. Scroll down and write the script as follows. (Select the Hello World Template from the drop down arrow).
+```
+   pipeline {
+    agent any
+    
+    tools{
+        jdk 'jdk11'
+        maven 'maven'
+    }
+    
+    environment{
+        SCANNER_HOME = tool 'sonar-scanner'
+    }
+
+    stages {
+        stage('Git Checkout') {
+            steps {
+                git branch: 'main', changelog: false, poll: false, url: 'https://github.com/ManviSingh20/Jenkins-CI-CD-pipeline.git'
+            }
+        }
+        
+        stage('Compile') {
+            steps {
+                sh "mvn clean compile"
+            }
+        }
+        
+        stage('SonarQube Analysis') {
+            steps {
+                sh '''$SCANNER_HOME/bin/sonar-scanner \
+                -Dsonar.url=http://65.2.137.41:9000/ \
+                -Dsonar.login=squ_72473c72bb2aa2d87a1e8bb912088d460b6171bd \
+                -Dsonar.projectName=shopping-cart \
+                -Dsonar.java.binaries=. \
+                -Dsonar.projectKey=shopping-cart
+                '''
+            }
+        }
+        
+        stage('OWASP SCAN') {
+            steps {
+                dependencyCheck additionalArguments: ' --scan ./', odcInstallation: 'DP'
+                    dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
+            }
+        }
+        
+        stage('Build Application') {
+            steps {
+                sh "mvn clean install -DskipTests=true"
+            }
+        }
+        
+        stage('Build & Push Docker Application') {
+            steps {
+                script{
+                    withDockerRegistry(credentialsId: '7fcc7c8c-6396-4552-b38f-26ca905cd256', toolName: 'docker') {
+                        sh  "docker build -t shopping:latest -f docker/Dockerfile ."
+                            "docker tag shopping:latest manvisingh20/shopping:latest"
+                            "docker push manvisingh20/shopping:latest"
+                    }
+                }
+            }
+        }
+        
+        stage('Trigger CD_Pipeline') {
+            steps {
+                build job: "CD_Pipeline" , wait: true
+            }
+        }
+    }
+}
+```
+
 5. The stages are as follows:
    1. Git Checkout - Use pipline syntax to write the script of copying the source code from github repo and write it in the script.
       
@@ -240,6 +312,8 @@ sudo systemctl restart docker
 
       <img width="947" alt="Screenshot 2024-09-19 at 2 44 31 AM" src="https://github.com/user-attachments/assets/ec8cf780-f69d-4163-9adf-d9da92669a5b">
 
+   7. Trigger CD_Pipeline.
+      
 As soon as the CI_Pipeline completes, it will automatically trigger the CD_Pipeline.
 
 ### CD_Pipeline
@@ -247,13 +321,25 @@ As soon as the CI_Pipeline completes, it will automatically trigger the CD_Pipel
 1. Enable the discard old builds while keepng max no. of builds to keep as 2, similar to CI_Pipeline.
 2. Scroll down and write the script as follows. (Select the Hello World Template from the drop down arrow).
 
-<img width="928" alt="Screenshot 2024-09-19 at 1 16 00 AM" src="https://github.com/user-attachments/assets/ab622faa-49de-47db-b672-57d8e5a2f5e8">
+```
+pipeline {
+    agent any
+
+    stages {
+        stage('Docker Deploy to Container') {
+            steps {
+                withDockerRegistry(credentialsId: '7fcc7c8c-6396-4552-b38f-26ca905cd256', toolName: 'docker') {
+                    sh  "docker run -d --name shopping-cart -p 8070:8070 manvisingh20/shopping:latest"
+                        " "
+                }
+            }
+        }
+    }
+}
+```
 
 The CD_Pipeline will have only 1 stage, ``` Docker Deploy to Container ```, containing the script having docker commands. Here, we can use the pipeline syntax to generate the script format. 
 
-## Commands
-1. ps -ef | grep jenkins - Start jenkins server.
-2. 
 
 
 
