@@ -188,6 +188,9 @@ sudo systemctl restart docker
 
 ### CI_Pipeline
 
+1. Enable the discard old builds while keepng max no. of builds to keep as 2.
+2. Scroll down and write the script as follows. (Select the Hello World Template from the drop down arrow).
+
 
 
 
