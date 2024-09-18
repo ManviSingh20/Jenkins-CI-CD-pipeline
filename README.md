@@ -152,6 +152,12 @@ sudo systemctl restart docker
 
 <img width="402" alt="Screenshot 2024-09-18 at 1 28 36 AM" src="https://github.com/user-attachments/assets/e09b4356-df0c-4b9e-980a-63bdf04c1e9b">
 
+2. Add the Jenkins user to the Docker user group by using the following commands:
+   ```
+   sudo usermod -aG docker jenkins
+   sudo systemctl restart jenkins
+   ```
+
 2. Create a container for SonarQube using command:
    
      ```
