@@ -223,6 +223,8 @@ sudo systemctl restart docker
       - It has it's own format for script given below:
         ```
         dependencyCheck additionalArguments: '', odcInstallation: 'DP-check'
+           dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
+        ```
            
       
 
