@@ -197,6 +197,9 @@ sudo systemctl restart docker
 2. Download the following tools on Jenkins:
    
 3. Scroll down and write the script as follows. (Select the Hello World Template from the drop down arrow).
+4. The stages are as follows:
+   1. Git Checkout - Use pipline syntax to write the script of copying the source code from github repo.
+      
 
 
 As soon as the CI_Pipeline completes, it will automatically trigger the CD_Pipeline.
