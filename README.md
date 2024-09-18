@@ -196,6 +196,11 @@ sudo systemctl restart docker
 
 <img width="934" alt="Screenshot 2024-09-18 at 1 36 15 AM" src="https://github.com/user-attachments/assets/a00038fb-0fa8-4a29-8c78-78907df5cb86">
 
+3. The second job will be CD_Pipeline.
+
+<img width="882" alt="Screenshot 2024-09-19 at 2 57 27 AM" src="https://github.com/user-attachments/assets/36f48b5e-e9df-4dee-ae9f-c0ec6d25a130">
+
+
 ### CI_Pipeline
 
 1. Enable the discard old builds while keepng max no. of builds to keep as 2.
