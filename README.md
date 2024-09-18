@@ -147,9 +147,9 @@ sudo systemctl restart docker
 
 ## Set Up SonarQube Server
 
-1. Before creating a job on Jenkins, configure and install the following plugins:
+1. Before creating a job on Jenkins, configure and install the following plugins, go to Dashboard > Manage Jenkins > Plugins > Available Plugins:
 
-   ```Eclipse Temurin Installer.```
+   ```Eclipse Temurin Installer```
    
    ```openJDK-native-plugin```
    
@@ -171,12 +171,13 @@ sudo systemctl restart docker
       
 <img width="716" alt="Screenshot 2024-09-18 at 1 31 07 AM" src="https://github.com/user-attachments/assets/aa737f37-5e2b-4cf5-b4fe-82c77b15eb54">
 
-3. The SonarQube server will start
+3. Paste the publicIP of the instance in the new browser window as ``` <publicIP>:9000 ```.
+4. The SonarQube server will start
    
    - Use Username as: ``` admin ```
    - Use Password as: ``` admin ```
 
-4. There will be a window to chance the password. Select the password of your own.
+5. There will be a window to chance the password. Select the password of your own.
 
 <img width="1389" alt="Screenshot 2024-09-18 at 1 33 38 AM" src="https://github.com/user-attachments/assets/4ca19318-23ae-4bb2-aeb9-25f05c541af0">
 
