@@ -17,6 +17,7 @@ In this project, we will design and implement a comprehensive CI/CD pipeline to 
 4. AWS - Amazon Web Services (AWS) provides cloud infrastructure for hosting and deploying applications.
 
 
+
 ## Pipeline Overview
 
 1. Continuous Integration (CI) Pipeline: The CI pipeline focuses on automating the integration process of code changes. It includes the following stages:
@@ -107,6 +108,8 @@ Note - Java is a prerequisite for running Jenkins because Jenkins is built on Ja
 <img width="858" alt="Screenshot 2024-09-18 at 1 17 25 AM" src="https://github.com/user-attachments/assets/6cb13542-6ef9-4a8b-a861-ecdc180bcab7">
 
 7. Install suggested plugins.
+         <img width="1013" alt="Screenshot 2024-09-19 at 1 32 26 AM" src="https://github.com/user-attachments/assets/b9723372-a3c8-43b9-a1a1-a86ff571f778">
+
 8. Create user admin.
 9. Save and continue.
 10. Start using jenkins.
