@@ -194,13 +194,18 @@ sudo systemctl restart docker
 ### CI_Pipeline
 
 1. Enable the discard old builds while keepng max no. of builds to keep as 2.
-2. Download the following tools on Jenkins:
+2. Define the following tools on Jenkins. Go to Dashboard > Manage Jenkins > Tools. Set up the following:
+   1. JDK > Name = jdk11 > Install automatically > Add Installer > Install from adoptium .net > Choose jdk-11.0.19+7.
+   2. SonarQube Scanner Installations > Name = sonar-scanner > Install automatically > Version = SonarQube Scanner 4.8.0.2856
+   3. Maven >  Name = maven > Install automatically > Version = 3.6.0
    
-3. Scroll down and write the script as follows. (Select the Hello World Template from the drop down arrow).
-4. The stages are as follows:
-   1. Git Checkout - Use pipline syntax to write the script of copying the source code from github repo.
+4. Scroll down and write the script as follows. (Select the Hello World Template from the drop down arrow).
+5. The stages are as follows:
+   1. Git Checkout - Use pipline syntax to write the script of copying the source code from github repo and write it in the script.
       
+   <img width="1074" alt="Screenshot 2024-09-19 at 1 53 08 AM" src="https://github.com/user-attachments/assets/f8c0b025-db8a-46e5-97d7-fa2aefffb7cd">
 
+   2. 
 
 As soon as the CI_Pipeline completes, it will automatically trigger the CD_Pipeline.
 
