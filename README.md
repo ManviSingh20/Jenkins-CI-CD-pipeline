@@ -93,13 +93,13 @@ Note - Java is a prerequisite for running Jenkins because Jenkins is built on Ja
 
 <img width="968" alt="Screenshot 2024-09-18 at 4 08 56 AM" src="https://github.com/user-attachments/assets/715e6ff4-4ad3-416b-94c0-ab9f032db35c">
 
-5. Check if jenkins is running
+6. Check if jenkins is running
    ```
    sudo systemctl status jenkins
 
    ```
 
-6. Copy the path give on the web page and use it in the command:
+7. Copy the path give on the web page and use it in the command:
    ```
    sudo cat /var/lib/jenkins/secrets/initialAdminPassword
    ```
@@ -107,12 +107,13 @@ Note - Java is a prerequisite for running Jenkins because Jenkins is built on Ja
 
 <img width="858" alt="Screenshot 2024-09-18 at 1 17 25 AM" src="https://github.com/user-attachments/assets/6cb13542-6ef9-4a8b-a861-ecdc180bcab7">
 
-7. Install suggested plugins.
-         <img width="1013" alt="Screenshot 2024-09-19 at 1 32 26 AM" src="https://github.com/user-attachments/assets/b9723372-a3c8-43b9-a1a1-a86ff571f778">
+8. Install suggested plugins.
+   
+<img width="1013" alt="Screenshot 2024-09-19 at 1 32 26 AM" src="https://github.com/user-attachments/assets/b9723372-a3c8-43b9-a1a1-a86ff571f778">
 
-8. Create user admin.
-9. Save and continue.
-10. Start using jenkins.
+9. Create user admin.
+10. Save and continue.
+11. Start using jenkins.
 
 
 
